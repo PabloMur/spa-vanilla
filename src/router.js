@@ -1,33 +1,30 @@
 import { initPageWelcome } from "./pages/welcome";
-import { initPageInstructions } from "./pages/instructions";
-import { initPageChoose } from "./pages/choose";
-import { initPageResult } from "./pages/result";
 import { initPageComparition } from "./pages/comparition";
+import { initPanelPage } from "./pages/panel";
+import { initMapsPage } from "./pages/maps";
+import { initWeaponsPage } from "./pages/weapons";
+import { initAgentsPage } from "./pages/agents";
 
 const routes = [
   {
-    path: /\/desafio-m5/,
-    handler: initPageWelcome,
+    path: /\/panel/,
+    handler: initPanelPage,
   },
   {
     path: /\/welcome/,
     handler: initPageWelcome,
   },
   {
-    path: /\/instructions/,
-    handler: initPageInstructions,
+    path: /\/maps/,
+    handler: initMapsPage,
   },
   {
-    path: /\/choose/,
-    handler: initPageChoose,
+    path: /\/agents/,
+    handler: initAgentsPage,
   },
   {
-    path: /\/comparition/,
-    handler: initPageComparition,
-  },
-  {
-    path: /\/result/,
-    handler: initPageResult,
+    path: /\/weapons/,
+    handler: initWeaponsPage,
   },
 ];
 
