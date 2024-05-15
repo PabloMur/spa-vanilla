@@ -5,7 +5,7 @@ export function initPageWelcome(params) {
   div.className = "welcome";
   div.innerHTML = `
     <custom-text variant="title" class="title">
-      Prueba Técnica - SPA Vanilla JS
+      SPA Vanilla JS
     </custom-text>
     <div>
       <custom-text variant="body" class="body">
