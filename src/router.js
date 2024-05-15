@@ -1,30 +1,29 @@
 import { initPageWelcome } from "./pages/welcome";
-import { initPageComparition } from "./pages/comparition";
-import { initPanelPage } from "./pages/panel";
-import { initMapsPage } from "./pages/maps";
-import { initWeaponsPage } from "./pages/weapons";
-import { initAgentsPage } from "./pages/agents";
+import { initMarplaPage } from "./pages/marpla";
+import { initMontevideoPage } from "./pages/monte";
+import { initTrenquePage } from "./pages/trenque";
+import { initTestPage } from "./pages/test";
 
 const routes = [
   {
-    path: /\/panel/,
-    handler: initPanelPage,
-  },
-  {
-    path: /\/welcome/,
+    path: /^\/welcome$/,
     handler: initPageWelcome,
   },
   {
-    path: /\/maps/,
-    handler: initMapsPage,
+    path: /^\/marpla$/,
+    handler: initMarplaPage,
   },
   {
-    path: /\/agents/,
-    handler: initAgentsPage,
+    path: /^\/trenque$/,
+    handler: initTrenquePage,
   },
   {
-    path: /\/weapons/,
-    handler: initWeaponsPage,
+    path: /^\/monte$/,
+    handler: initMontevideoPage,
+  },
+  {
+    path: /^\/test$/,
+    handler: initTestPage,
   },
 ];
 
@@ -39,20 +38,26 @@ export function initRouter(container) {
       if (r.path.test(route)) {
         const el = r.handler({ goTo: goTo });
 
-        if (container.firstChild) {
-          container.firstChild.remove();
-        }
+        // Limpiar el contenedor antes de agregar el nuevo contenido
+        container.innerHTML = "";
         container.appendChild(el);
+        return; // Detener la iteración una vez que se encuentra la ruta
       }
     }
+
+    // Manejar el caso cuando no se encuentra ninguna ruta válida
+    console.error("Ruta no encontrada:", route);
+    container.innerHTML = `<p>Error: Página no encontrada.</p>`;
   }
 
-  if (location.pathname == "/") {
+  // Manejar la navegación inicial
+  if (location.pathname === "/" || location.pathname === "/welcome") {
     goTo("/welcome");
   } else {
     handleRoute(location.pathname);
   }
 
+  // Escuchar eventos de navegación
   window.addEventListener("popstate", () => {
     handleRoute(location.pathname);
   });

@@ -1,39 +1,11 @@
 * {
   box-sizing: border-box;
   font-family: "Odibee Sans", cursive;
+  overflow: hidden;
 }
 
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-}
-
-#root {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 100%;
-}
-
-.containerManos {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 40vh;
-  width: 100%;
-  transform: translateY(0%);
-  animation: showUp 0.7s linear;
-}
-
-@keyframes showUp {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
 }

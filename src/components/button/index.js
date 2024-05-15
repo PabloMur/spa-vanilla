@@ -15,7 +15,7 @@ export function initCustomButton() {
 
         style.innerHTML = `
               .root{
-                  font-size: 18px;
+                  font-size: 25px;
                   border-radius: 4px;
                   padding: 17px 13px;
                   background-color: orange;
@@ -24,10 +24,12 @@ export function initCustomButton() {
                   border: none;
                   animation: lower .4s ease ;
                   cursor: pointer;
+                  font-weight: bolder;
+                  font-family: "Odibee Sans", cursive;
               }
               @media screen and (min-width: 960px){
                 .root{
-                  max-width: 600px;
+                  max-width: 200px;
                   margin: 0 auto;
                 }
               }
