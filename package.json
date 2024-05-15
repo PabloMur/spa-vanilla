@@ -6,7 +6,7 @@
   "description": "Una pequeña aplicación SPA en JS Vanilla para mostrar datos climáticos.",
   "scripts": {
     "dev": "parcel serve ./src/index.html",
-    "build": "parcel build ./src/index.html --out-dir dist --public-url ./",
+    "build": "parcel build ./src/index.html --public-url ./",
     "deploy": "gh-pages -d dist",
     "start": "npm run dev"
   },
