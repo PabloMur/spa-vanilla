@@ -18,7 +18,7 @@
 
 ## Demo
 
-Puedes ver la aplicación desplegada [aquí](https://master--spa-vanillajs-dt.netlify.app/welcome).
-https://master--spa-vanillajs-dt.netlify.app/welcome
+Puedes ver la aplicación desplegada:
+https://spa-vanillajs-dt.netlify.app/
 
 ¡Espero que disfrutes explorando la aplicación!
