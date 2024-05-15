@@ -1,15 +1,13 @@
 {
   "name": "spa-vanilla",
   "version": "1.0.0",
-  "description": "Una pequeña aplicación SPA en JS Vanilla para mostrar datos climáticos.",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:PabloMur/spa-vanilla.git"
-  },
+  "repository": "git@github.com:PabloMur/spa-vanilla.git",
   "author": "Pablo Murillo <pablomurillo.sp@gmail.com>",
+  "description": "Una pequeña aplicación SPA en JS Vanilla para mostrar datos climáticos.",
   "scripts": {
     "dev": "parcel serve ./src/index.html",
-    "build": "parcel build ./src/index.html --out-dir=dist --public-url ./",
+    "build": "parcel build ./src/index.html --out-dir dist --public-url ./",
+    "deploy": "gh-pages -d dist",
     "start": "npm run dev"
   },
   "license": "ISC",
